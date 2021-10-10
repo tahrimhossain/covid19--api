@@ -8,9 +8,9 @@ A REST api made using flask that returns covid data
 
 ### Get Summary
 
-```http
-  GET https://cov-api-19.herokuapp.com/summary
-```
+
+GET https://cov-api-19.herokuapp.com/summary
+
 ### Response
 
 ```
@@ -44,9 +44,9 @@ A REST api made using flask that returns covid data
 
 #### Get All Daily New Confirmed
 
-```http
-  GET https://cov-api-19.herokuapp.com/dailynewconfirmed/{$countryname}
-```
+
+  GET https://cov-api-19.herokuapp.com/dailynewconfirmed/{countryname}
+
 
 ```
 [
@@ -70,9 +70,8 @@ A REST api made using flask that returns covid data
 
 #### Get All Daily New Deaths
 
-```http
-  GET https://cov-api-19.herokuapp.com/dailynewdeath/{$countryname}
-```
+GET https://cov-api-19.herokuapp.com/dailynewdeath/{countryname}
+
 
 ```
 [
