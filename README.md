@@ -47,6 +47,7 @@ GET https://cov-api-19.herokuapp.com/summary
 
   GET https://cov-api-19.herokuapp.com/dailynewconfirmed/{countryname}
 
+### Response
 
 ```
 [
@@ -72,6 +73,7 @@ GET https://cov-api-19.herokuapp.com/summary
 
 GET https://cov-api-19.herokuapp.com/dailynewdeath/{countryname}
 
+### Response
 
 ```
 [
