@@ -65,7 +65,7 @@ GET https://cov-api-19.herokuapp.com/country/{countryname}
 ```
 
 
-#### Get All Daily New Confirmed
+### Get All Daily New Confirmed
 
 
 GET https://cov-api-19.herokuapp.com/all/confirmed/{countryname}
@@ -92,7 +92,7 @@ GET https://cov-api-19.herokuapp.com/all/confirmed/{countryname}
 ```  
 
 
-#### Get All Daily New Deaths
+### Get All Daily New Deaths
 
 GET https://cov-api-19.herokuapp.com/all/death/{countryname}
 
