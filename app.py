@@ -52,7 +52,7 @@ class CountryInfo(Resource):
 
 	def get(self,country):
 		info = database.summary.find_one({"_id":"summary"},{"Countries":{'$elemMatch':{"Country":country}}})
-		if "Countries" in info && len(info["Countries"]) == 1:
+		if "Countries" in info and len(info["Countries"]) == 1:
 			return info["Countries"][0]
 		else:
 			abort(404,message = "Data not found")	
