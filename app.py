@@ -29,29 +29,38 @@ class Summary(Resource):
 			return summary	
 
 
-class DailyNewConfirmed(Resource):
+class AllDailyNewConfirmed(Resource):
 
 	def get(self,country):
-		dailyNewConfirmed = database.confirmedGraphData.find_one({"_id":country})
-		if dailyNewConfirmed == None:
+		allDailyNewConfirmed = database.confirmedGraphData.find_one({"_id":country})
+		if allDailyNewConfirmed == None:
 			abort(404,message = "Data not found")
 		else:
-			return dailyNewConfirmed["data"]	
+			return allDailyNewConfirmed["data"]	
 
 
-class DailyNewDeaths(Resource):
+class AllDailyNewDeaths(Resource):
 
 	def get(self,country):
-		dailyNewDeath = database.deathGraphData.find_one({"_id":country})
-		if dailyNewDeath == None:
+		allDailyNewDeath = database.deathGraphData.find_one({"_id":country})
+		if allDailyNewDeath == None:
 			abort(404,message = "Data not found")
 		else:
-			return dailyNewDeath["data"]	
+			return allDailyNewDeath["data"]	
 
+class CountryInfo(Resource):
+
+	def get(self,country):
+		info = database.summary.find_one({"_id":"summary"},{"Countries":{'$elemMatch':{"Country":country}}})
+		if "Countries" in info && len(info["Countries"]) == 1:
+			return info["Countries"][0]
+		else:
+			abort(404,message = "Data not found")	
 
 api.add_resource(Summary,"/summary")
-api.add_resource(DailyNewConfirmed,"/dailynewconfirmed/<string:country>")
-api.add_resource(DailyNewDeaths,"/dailynewdeath/<string:country>")
+api.add_resource(AllDailyNewConfirmed,"/all/confirmed/<string:country>")
+api.add_resource(AllDailyNewDeaths,"/all/death/<string:country>")
+api.add_resource(CountryInfo,"/country/<string:country>")
 
 if __name__ == "__main__": 
 	app.run()
