@@ -26,7 +26,8 @@ GET https://cov-api-19.herokuapp.com/summary
     "Countries": 
     [
         {
-            "Country": "USA", 
+            "Country": "USA",
+            "Flag": "https://www.worldometers.info/img/flags/small/tn_us-flag.gif" 
             "NewConfirmed": 9428, 
             "TotalConfirmed": 45030695, 
             "NewDeaths": 207, 
@@ -42,10 +43,32 @@ GET https://cov-api-19.herokuapp.com/summary
     ]    
 ```
 
+
+### Get Country
+
+
+GET https://cov-api-19.herokuapp.com/country/{countryname}
+
+### Response
+
+```
+{
+    "Country": "USA",
+    "Flag": "https://www.worldometers.info/img/flags/small/tn_us-flag.gif" 
+    "NewConfirmed": 9428, 
+    "TotalConfirmed": 45030695, 
+    "NewDeaths": 207, 
+    "TotalDeaths": 730413, 
+    "TotalRecovered": 34480801, 
+    "NewRecovered": 1670
+}
+```
+
+
 #### Get All Daily New Confirmed
 
 
-  GET https://cov-api-19.herokuapp.com/dailynewconfirmed/{countryname}
+GET https://cov-api-19.herokuapp.com/all/confirmed/{countryname}
 
 ### Response
 
@@ -71,7 +94,7 @@ GET https://cov-api-19.herokuapp.com/summary
 
 #### Get All Daily New Deaths
 
-GET https://cov-api-19.herokuapp.com/dailynewdeath/{countryname}
+GET https://cov-api-19.herokuapp.com/all/death/{countryname}
 
 ### Response
 
