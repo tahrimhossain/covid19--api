@@ -57,10 +57,27 @@ class CountryInfo(Resource):
 		else:
 			abort(404,message = "Data not found")	
 
+class Global(Resource):
+	
+	def get(self):
+
+		summary = database.summary.find_one({"_id":"summary"})
+
+		if summary == None:
+			abort(404,message = "Data not found")
+		elif "Global" not in summary:
+			abort(404,message = "Data not found")		
+		else:
+			return summary["Global"]	
+		
+
+
+
 api.add_resource(Summary,"/summary")
 api.add_resource(AllDailyNewConfirmed,"/all/confirmed/<string:country>")
 api.add_resource(AllDailyNewDeaths,"/all/death/<string:country>")
 api.add_resource(CountryInfo,"/country/<string:country>")
+api.add_resource(Global,"/global")
 
 if __name__ == "__main__": 
 	app.run()
