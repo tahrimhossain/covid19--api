@@ -44,6 +44,23 @@ GET https://cov-api-19.herokuapp.com/summary
 ```
 
 
+### Get Global
+
+
+GET https://cov-api-19.herokuapp.com/global
+
+### Response
+```
+{
+    "NewConfirmed": 288111, 
+    "TotalConfirmed": 237809849, 
+    "NewDeaths": 4491, 
+    "TotalDeaths": 4853007, 
+    "TotalRecovered": 214867625, 
+    "NewRecovered": 253925
+}
+```
+
 ### Get Country
 
 
