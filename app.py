@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Api,Resource,reqparse,abort
 from pymongo import MongoClient
 from bson import ObjectId
@@ -7,6 +8,7 @@ import json
 import os
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 mongoURL = os.environ.get('MONGO_URL')
