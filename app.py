@@ -8,7 +8,7 @@ import json
 import os
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app,resources = {r"*":{"origins":"*"}})
 api = Api(app)
 
 mongoURL = os.environ.get('MONGO_URL')
