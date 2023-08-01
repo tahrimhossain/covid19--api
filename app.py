@@ -15,7 +15,7 @@ mongoURL = os.environ.get('MONGO_URL')
 
 
 
-client = MongoClient(mongoURL)
+client = MongoClient(mongoURL,connect = False)
 database = client["covidDatabse"]
 
 
