@@ -9,7 +9,7 @@ A REST api made using flask that returns covid data
 ### Get Summary
 
 
-GET https://cov-api-19.herokuapp.com/summary
+GET https://covid19-api.onrender.com/summary
 
 ### Response
 
@@ -47,7 +47,7 @@ GET https://cov-api-19.herokuapp.com/summary
 ### Get Global
 
 
-GET https://cov-api-19.herokuapp.com/global
+GET https://covid19-api.onrender.com/global
 
 ### Response
 ```
@@ -64,7 +64,7 @@ GET https://cov-api-19.herokuapp.com/global
 ### Get Country
 
 
-GET https://cov-api-19.herokuapp.com/country/{countryname}
+GET https://covid19-api.onrender.com/country/{countryname}
 
 ### Response
 
@@ -85,7 +85,7 @@ GET https://cov-api-19.herokuapp.com/country/{countryname}
 ### Get All Daily New Confirmed
 
 
-GET https://cov-api-19.herokuapp.com/all/confirmed/{countryname}
+GET https://covid19-api.onrender.com/all/confirmed/{countryname}
 
 ### Response
 
@@ -111,7 +111,7 @@ GET https://cov-api-19.herokuapp.com/all/confirmed/{countryname}
 
 ### Get All Daily New Deaths
 
-GET https://cov-api-19.herokuapp.com/all/death/{countryname}
+GET https://covid19-api.onrender.com/all/death/{countryname}
 
 ### Response
 
